@@ -14,8 +14,7 @@ class CustomParseException extends Exception{
 public class w11p2 {
 
     public static void main(String[] args) throws CustomParseException {
-        Scanner scanner = new Scanner(System.in);
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter a date (dd-MM-yyyy): ");
             String dateString = scanner.nextLine();
 
@@ -33,7 +32,6 @@ public class w11p2 {
         } catch (IllegalArgumentException e) {
             handleCustomException(new CustomParseException("Invalid formatter pattern.", e));
         } finally {
-            scanner.close();
             System.out.println("Scanner closed successfully.");
         }
     }

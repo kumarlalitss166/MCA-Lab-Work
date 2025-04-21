@@ -1,21 +1,13 @@
 package com.mycompany.week_11nb;
-
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-//Custom Exception Class
-class CustomParseException extends Exception{
-    public CustomParseException(String message, Throwable cause){
-        super(message, cause);
-    }
-}
 public class w11p3{
 
     public static void main(String[] args) throws CustomParseException {
-        Scanner scanner = new Scanner(System.in);
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter a date (dd-MM-yyyy): ");
             String dateString = scanner.nextLine();
 
@@ -33,7 +25,6 @@ public class w11p3{
         } catch (IllegalArgumentException e) {
             handleCustomException(new CustomParseException("Invalid formatter pattern.", e));
         } finally {
-            scanner.close();
             System.out.println("Scanner closed successfully.");
         }
     }
