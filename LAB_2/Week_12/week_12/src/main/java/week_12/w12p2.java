@@ -16,7 +16,7 @@ class NetworkConnectionException extends Exception {
 
 public class w12p2 {
     public static void main(String[] args) throws MalformedURLException, NetworkConnectionException {
-        fetchWebPage("http://127.0.1:3000/Week_11/test.html");
+        fetchWebPage("http://127.0.0.1:3000/week_12/src/main/java/week_12/test.html");
     }
 
     public static void fetchWebPage(String urlString)

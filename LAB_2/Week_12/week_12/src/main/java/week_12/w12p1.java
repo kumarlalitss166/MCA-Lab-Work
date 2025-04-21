@@ -10,7 +10,7 @@ import java.net.URL;
 public class w12p1 {
     public static void main(String[] args) {
         try {
-            fetchWebPage("http://127.0.0.1:3000/Week_11/test.html");
+            fetchWebPage("http://127.0.0.1:3000/week_12/src/main/java/week_12/test.html");
         } catch (MalformedURLException e) {
             System.out.println("Invalid URL: " + e.getMessage());
             e.printStackTrace();  // Optional: show where it failed

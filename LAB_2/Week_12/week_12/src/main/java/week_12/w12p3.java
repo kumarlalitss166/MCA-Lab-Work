@@ -7,16 +7,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-// Custom Exception Class
-class NetworkConnectionException extends Exception {
-    public NetworkConnectionException(String message, Throwable cause) {
-        super(message, cause);
-    }
-}
-
-public class w12p3 {
+public class w12p3{
     public static void main(String[] args) throws MalformedURLException, NetworkConnectionException {
-        fetchWebPage("hp://127.0.1:3000/Week_11/test.html");
+        fetchWebPage("://127.0.0.1:3000/week_12/src/main/java/week_12/test.html");
     }
 
     public static void fetchWebPage(String urlString)
