@@ -1,0 +1,5 @@
+x = input("Enter a number: ")
+first = int(x[:2])
+second = int(x[2:])
+sum = pow(first, 2) + pow(second, 2)
+print(f"Required Sum:", sum)
