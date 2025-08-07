@@ -27,15 +27,16 @@ class Solution:
             exit()
         print("Network ID:\t\t\t", networkID)
         
-        broadcastIDSegment = ['.0.0.255', '.0.0.255', '.0.0.255']
+        broadcastIDSegment = ['.255.255.255', '.255.255','.255' ]
         firstIDSegment = ['.0.0.1', '.0.0.1', '.0.0.1']
         lastIDSegment = ['.255.255.254', '.255.255.254', '.255.255.254']
         cidrSegment = ['/8', '/16', '/24', 'NA', 'NA']
         validHosts = [pow(2, 24) - 2, pow(2, 16) - 2, pow(2, 8) - 2, 'NA', 'NA']
         classesSegment = ['A', 'B', 'C', 'D', 'E']
+        
         if value != 4 and value != 5:
             # Broadcast Address
-            broadcastID =  ipSegments[0] + broadcastIDSegment[value - 1]
+            broadcastID =  '.'.join(ipSegments[:value]) + broadcastIDSegment[value - 1]
             # First and Last Address
             firstId = ipSegments[0] + firstIDSegment[value - 1]
             lastID = ipSegments[0] + lastIDSegment[value - 1]
